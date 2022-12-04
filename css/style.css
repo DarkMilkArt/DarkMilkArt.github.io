@@ -72,18 +72,18 @@ article.services{
 
 article.services button{
     display:flex;
-    margin: 8px;
+    margin: 3px;
     height: 40px;
     align-items: center;
-    border: none;
+    border: 1px solid rgba(0, 0, 0, 0);
     background-color: #F8F8F8;
     box-sizing: border-box;
 }
 
 article.services button:focus, article.services button:hover{
-    display:flex;
-    margin: 8px;
-    height: 40px;
+ 
+ 
+
     align-items: center;
     border: 1px solid #41F6D7;
     background-color: #ffffff;
@@ -92,9 +92,9 @@ article.services button:focus, article.services button:hover{
 }
 
 article.services button:checked, article.services button:active{
-    display:flex;
-    margin: 8px;
-    height: 40px;
+ 
+ 
+
     align-items: center;
     border: 1px solid #41F6D7;
     background-color: #ffffff;
@@ -392,11 +392,11 @@ and (max-device-width:899px){
        flex-wrap: wrap;
     }
     article.services>div{
-        margin:0 50px;
+     width: fit-content;
      }
 
-    div.services__reviews{
-        width: 600px;
+    div:last-child{
+    flex-grow:1;
     }
 
 } 
