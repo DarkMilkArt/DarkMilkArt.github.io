@@ -23,7 +23,6 @@
 	src: local('☺'), url('../fonts/TTLakes-Bold.woff') format('woff'), url('../fonts/TTLakes-Bold.ttf') format('truetype'), url('../fonts/TTLakes-Bold.svg') format('svg');
     font-weight: 700;
     font-style: normal;
-
 }
 
 body{
@@ -298,6 +297,7 @@ and (max-device-width:899px){
 }
 
 @media (min-width:900px){
+    body{font-size: 0.7em;}
 
     .communicate-status-buttons {
         justify-content: space-between;
@@ -361,6 +361,7 @@ and (max-device-width:899px){
         flex-wrap: wrap; 
         max-height: 400px; 
     }
+    
     .about-us__img{
         display: flex;
         height: 300px;
@@ -368,6 +369,7 @@ and (max-device-width:899px){
     } 
 
     main.about-us>span{
+        
         display: flex;
         width: 40%;
         flex-direction: column;
@@ -382,8 +384,7 @@ and (max-device-width:899px){
     }
 
     div.services-line{
-        height: auto;
-    
+        height: auto;    
     }
 
     article.services{
@@ -391,14 +392,20 @@ and (max-device-width:899px){
        width: auto;
        flex-wrap: wrap;
     }
+
     article.services>div{
-     width: fit-content;
-     }
+     width: fit-content;    
+    }
+
+     article.services>div>button{
+     font-size: 0.9em;  
+     padding: 0 10px; 
+    }
 
     div:last-child{
     flex-grow:1;
+    flex-shrink: 0;
     }
-
 } 
 
 
