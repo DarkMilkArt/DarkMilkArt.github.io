@@ -297,7 +297,6 @@ and (max-device-width:899px){
 }
 
 @media (min-width:900px){
-    body{font-size: 0.7em;}
 
     .communicate-status-buttons {
         justify-content: space-between;
@@ -397,9 +396,9 @@ and (max-device-width:899px){
      width: fit-content;    
     }
 
-     article.services>div>button{
-     font-size: 0.9em;  
-     padding: 0 10px; 
+    article.services>div>button{  
+        flex-grow:1;    
+     padding: 0 60px; 
     }
 
     div:last-child{
