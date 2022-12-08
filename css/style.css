@@ -492,6 +492,7 @@ section.aside-bar__list button::before{
 
 section.aside-bar__list button:active::before,
 section.aside-bar__list button:hover::before,
+section.aside-bar__list button:focus::before,
 section.aside-bar__list button:checked::before{
 	content: "";
 	width: 10px;
@@ -503,7 +504,6 @@ section.aside-bar__list button:checked::before{
 
 }
 section.aside-bar__list button:checked,
-section.aside-bar__list button:hover,
 section.aside-bar__list button:focus{
 	border:none;
 	color:#7E7E82;
@@ -539,7 +539,8 @@ section.aside-bar__list button:focus{
 	transition: color 0.5s;
 }
 .aside-bar__footer__language-change>button:checked,
-.aside-bar__footer__language-change>button:active{
+.aside-bar__footer__language-change>button:focus,
+.aside-bar__footer__language-change>button:hover{
     color: #7E7E82;
 }
 
