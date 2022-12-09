@@ -275,7 +275,7 @@ margin-top: 0;
 
 @media only screen
 and (min-device-width:550px)
-and (max-device-width:899px){
+and (max-device-width:1099px){
     div.services__brends{
         display: none;
     }
@@ -316,7 +316,7 @@ and (max-device-width:899px){
         }
 }
 
-@media (min-width:900px){
+@media (min-width:1100px){
 
     .communicate-status-buttons {
         justify-content: space-between;
@@ -408,7 +408,7 @@ and (max-device-width:899px){
     }
 
     article.services{
-        overflow-x: scroll;
+        overflow-x: visible;
        display: flex;
        width: auto;
        flex-wrap: nowrap;
@@ -444,12 +444,10 @@ and (max-device-width:899px){
 	justify-content: space-between;
 	align-content: space-between;
 	width: 320px;
-	height: 100%;
 	flex-direction: column;
 	flex-wrap: nowrap;
-
 	box-sizing: border-box;
-	height: 100vh;
+    min-height: 100vh;
 }
 
 .aside-bar__top{
@@ -480,11 +478,12 @@ font-weight: 400;
 flex-direction: column;
 align-content:space-between;
 align-items: flex-start;
-margin: 46px 0;
+margin: 16px 25px 0;
 
 }
 .aside-bar__list>button{
 	font-family: 'TTLakes';
+    font-size: 1em;
 	background-color: #fff;
 	border: none;
 	border-radius: 6px;
@@ -493,7 +492,7 @@ margin: 46px 0;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	padding: 28px 24px;
+	padding: 28px 0px;
 	transition: color 0.9s;
 	color:#000;
 }
@@ -532,7 +531,7 @@ section.aside-bar__list button:focus{
     display: flex;
 	flex-direction: column;
 	margin-bottom: 35px;
-	margin-left: 19px;
+	margin-left: 26px;
 	justify-content: flex-start;
 	margin-top: auto;
     flex-wrap: wrap;
@@ -542,6 +541,7 @@ section.aside-bar__list button:focus{
     width: 152px;
     display: flex;
     justify-content:space-between;
+    margin-bottom: -2px;
 }
 
 .aside-bar__footer__mail{
@@ -551,7 +551,7 @@ section.aside-bar__list button:focus{
 }
 
 .aside-bar__footer__phone{
-    font-size: 1.3em;
+    font-size: 1.45em;
 	font-family: 'TTLakes';
 	font-weight: 700;
     margin: 16px 0 0 0;
@@ -567,6 +567,9 @@ section.aside-bar__list button:focus{
 
 .aside-bar__footer__language-change>button{
     color: #000;
+    font-family: 'TTLakes';
+    font-weight: 400;
+    font-size: 1em;
     padding: 0;
     margin: 0;
 	transition: color 0.5s;
