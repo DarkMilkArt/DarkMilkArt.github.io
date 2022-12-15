@@ -626,9 +626,8 @@ section.aside-bar__list button:focus{
         gap: 16px 32px;
         display: flex;
         flex-wrap: wrap;  
-        overflow: hidden;
-        
-        max-height: 240px;
+        overflow: hidden;        
+        max-height: 160px;
         transition: all 1s ease-in-out;  
     }
 
@@ -642,6 +641,8 @@ section.aside-bar__list button:focus{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        box-sizing: border-box;
+
     }
     .brends-list__logo {
     }
@@ -652,7 +653,8 @@ section.aside-bar__list button:focus{
         border-radius: 50%;
         height: 40px;
         width: 40px; 
-        background: #fff;               
+        background: #fff;  
+                     
     }
 
     .brends-list__show-all {
