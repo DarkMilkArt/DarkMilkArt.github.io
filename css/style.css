@@ -582,6 +582,181 @@ section.aside-bar__list button:focus{
 
 
 
+/*  Ремонтируемые бренды  
+    выпадающее меню  */
 
 
+    .brends-list {
+      display: flex; 
+      justify-content: flex-start; 
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: fit-content;
+      background-color: #F8F8F8;
+      align-items: flex-start;
+      border-top: 1px solid #41F6D7;
+    }
+    .brends-list__description {
+        font-family: 'TTLakes';
+        margin: 0 0 16px 0;
+        font-weight: 400;
+        color: #7E7E82;
+        display: flex;
+        flex-wrap: wrap;
+        text-transform: uppercase;
+        height: auto;
+        padding:16px 32px;        
+        background:linear-gradient(to right, 
+        rgba(255, 255, 255, 0),#fff);
+        flex-grow: 1;
+    }
 
+    .brends-list__button-show-more:checked ~ 
+    .brends-list__items {
+        display: flex;
+        padding:0 32px;
+        gap: 16px 32px;       
+    
+        max-height: 600px;                
+    } 
+
+    .brends-list__items {
+        display: flex;
+        padding:0 32px;
+        gap: 16px 32px;
+        display: flex;
+        flex-wrap: wrap;  
+        overflow: hidden;
+        
+        max-height: 240px;
+        transition: all 1s ease-in-out;  
+    }
+
+    .brends-list__block {
+        height: 72px;
+        width: 240px;
+        padding: 16px;
+        background-color: #fff;
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .brends-list__logo {
+    }
+    .brends-list__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px; 
+        background: #fff;               
+    }
+
+    .brends-list__show-all {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 16px 32px;
+        width: auto;
+        height: 24px ;
+        margin: 0;
+
+    }
+    .brends-list__button-show-more {
+        display: none;
+        width: 125px;
+        height: 24px;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+
+    .brends-list__button-show-more:checked {     
+        width: 125px;
+        height: 24px;    
+        margin: 0;
+    }
+
+    .brends-list__show-all-text::after {
+        content:'Показать все';
+        font-family: 'TTLakes';
+        font-size: 1.2em;
+        font-weight: 500;
+        margin: 0;
+        margin-top: -25px;
+        margin-left: -16px;
+        display: block;
+        opacity: 100%;
+        transform: translateX(0px);
+        transition: opacity 0.3s ease,
+        transform 1s ease;
+    }
+
+    .brends-list__show-all-text::before {
+        content:'Скрыть';
+        display: flex;
+        font-family: 'TTLakes';
+        font-size: 1.2em;
+        font-weight: 500;
+        margin: 0;
+        margin-left: -16px;
+        opacity: 0;
+        display: block;
+        transform: translateX(150px);
+        transition: opacity 0.3s ease, 
+        transform 1s ease;
+    }
+
+    .brends-list__button-show-more:checked ~ 
+.brends-list__show-all-text::before{
+        display: block;
+        transform: translateX(0);
+        opacity: 100%;
+    }
+
+    .brends-list__button-show-more:checked ~ 
+.brends-list__show-all-text::after{
+        transform: translateX(150px);
+        display: block;
+        opacity: 0;
+    }
+
+    .brends-list__show-img {
+        display: flex;
+        height: 24px;
+        width: 24px;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 16px 32px 16px 32px;
+        transition: all 1s ease;
+        transform: rotate(0deg);
+       
+    }
+
+    .brends-list__button-show-more:checked 
+    ~ .brends-list__show-img {
+        display: flex;
+        transform: rotate(180deg);
+        margin: 0;       
+        padding: 16px 32px 16px 32px;
+       
+    }
+
+    .brends-list__show-svg {
+        display: block;   
+        margin: 0; 
+    }
+    
+    .brends-list__label-check-box {
+        content: '';
+        background: #000;
+        opacity: 0;
+        width: 150px;
+        height: 64px;
+        position: absolute;
+        left: 32px;
+    }
