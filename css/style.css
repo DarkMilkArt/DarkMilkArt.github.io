@@ -598,6 +598,7 @@ section.aside-bar__list button:focus{
     }
     .brends-list__description {
         font-family: 'TTLakes';
+        font-size: 0.9em;
         margin: 0 0 16px 0;
         font-weight: 400;
         color: #7E7E82;
@@ -611,24 +612,64 @@ section.aside-bar__list button:focus{
         flex-grow: 1;
     }
 
+    @media (min-width:551px){
+        .brends-list__items-list{
+        display: flex;
+        padding:0;
+        gap: 16px 32px;        
+        flex-wrap: wrap;
+    }
+    }
+
     .brends-list__button-show-more:checked ~ 
     .brends-list__items {
         display: flex;
         padding:0 32px;
-        gap: 16px 32px;       
-    
+        gap: 16px 32px;    
         max-height: 600px;                
     } 
 
     .brends-list__items {
         display: flex;
         padding:0 32px;
-        gap: 16px 32px;
-        display: flex;
+        gap: 16px 32px;        
         flex-wrap: wrap;  
         overflow: hidden;        
         max-height: 160px;
         transition: all 1s ease-in-out;  
+    }
+
+    @media (max-width:550px){
+        .swiper-container { 
+        width: 490px;
+        height: fit-content;
+        }
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after{
+       display: none;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev{
+        height: 72px;
+        width: 50px;
+        z-index: 200;
+       background: linear-gradient(to right, 
+       rgba(255, 255, 255, 0), #fff);
+       margin: 0;
+       opacity: 1;
+       top: 88px;
+    }
+
+    .swiper-button-prev{
+        transform: rotate(180deg);
+        left: 0;
+    }
+
+    .swiper-button-next{        
+        right: 0;
     }
 
     .brends-list__block {
@@ -642,10 +683,9 @@ section.aside-bar__list button:focus{
         align-items: center;
         justify-content: space-between;
         box-sizing: border-box;
+    }
+    
 
-    }
-    .brends-list__logo {
-    }
     .brends-list__button {
         display: flex;
         justify-content: center;
@@ -653,8 +693,7 @@ section.aside-bar__list button:focus{
         border-radius: 50%;
         height: 40px;
         width: 40px; 
-        background: #fff;  
-                     
+        background: #fff;                       
     }
 
     .brends-list__show-all {
@@ -665,8 +704,8 @@ section.aside-bar__list button:focus{
         width: auto;
         height: 24px ;
         margin: 0;
-
     }
+
     .brends-list__button-show-more {
         display: none;
         width: 125px;
@@ -709,8 +748,8 @@ section.aside-bar__list button:focus{
         display: block;
         transform: translateX(150px);
         transition: opacity 0.3s ease, 
-        transform 1s ease;
-    }
+           transform 1s ease;
+    }    
 
     .brends-list__button-show-more:checked ~ 
 .brends-list__show-all-text::before{
@@ -735,8 +774,7 @@ section.aside-bar__list button:focus{
         margin: 0;
         padding: 16px 32px 16px 32px;
         transition: all 1s ease;
-        transform: rotate(0deg);
-       
+        transform: rotate(0deg);       
     }
 
     .brends-list__button-show-more:checked 
@@ -762,3 +800,34 @@ section.aside-bar__list button:focus{
         position: absolute;
         left: 32px;
     }
+
+    @media (max-width:550px) {    
+        .button-show-more,
+        .brends-list__show-all-text::after,
+        .brends-list__show-all-text::before,
+        .brends-list__show-img{
+            display: none;
+        }
+    }
+ 
+    .hidden{
+        display: none;
+    }
+
+    .brends-list__pagination{       
+        transform: scale(1) translateY(5px);
+    }  
+
+    .swiper-pagination-bullet{
+        background-color: #ddd; 
+        opacity: 1;  
+        transform: scale(1)     
+    }
+
+    .swiper-pagination-bullet-active{
+        background-color: #B5B6BC;    
+    }
+
+
+
+    

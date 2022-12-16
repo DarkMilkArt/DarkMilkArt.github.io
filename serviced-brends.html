@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>brends-list</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="scripts/swiper/swiper.js">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -17,61 +16,70 @@
         <input type="checkbox" id="button-show-more" class="brends-list__button-show-more" name="Показать все"
             value="show">
         <section class="brends-list__items">
-            <div class="brends-list__block">
-                <img src="img/serviced-brends__png/lenovo.png" alt="Lenovo" height="32px" width="128px"
-                    class="brends-list__logo">
-                <button class="brends-list__button"><img src="img/svg/go.svg"></button>
-            </div>
-            <div class="brends-list__block">
-                <img src="img/serviced-brends__png/samsung.png" height="38.52px" width="116px" alt="Samsung"
-                    class="brends-list__logo">
-                <button class="brends-list__button"><img src="img/svg/go.svg"></button>
-            </div>
-            <div class="brends-list__block">
-                <img src="img/serviced-brends__png/apple.png" alt="Apple" height="44px" width="44px"
-                    class="brends-list__logo">
-                <button class="brends-list__button"><img src="img/svg/go.svg"></button>
-            </div>
-            <div class="brends-list__block">
-                <img src="img/serviced-brends__png/viewsonic.png" alt="Viewsonic" height="21px" width="128px"
-                    class="brends-list__logo">
-                <button class="brends-list__button"><img src="img/svg/go.svg"></button>
-            </div>
-            <div class="brends-list__block">
-                <img src="img/serviced-brends__png/bosch.png" alt="Bosch" height="28.6px" width="128px"
-                    class="brends-list__logo">
-                <button class="brends-list__button"><img src="img/svg/go.svg"></button>
-            </div>
-            <div class="brends-list__block">
-                <img src="img/serviced-brends__png/hp.png" alt="Hp" height="52px" width="52px"
-                    class="brends-list__logo">
-                <button class="brends-list__button"><img src="img/svg/go.svg"></button>
-            </div>
-            <div class="brends-list__block">
-                <img src="img/serviced-brends__png/acer.png" alt="Acer" height="24px" width="94px"
-                    class="brends-list__logo">
-                <button class="brends-list__button"><img src="img/svg/go.svg"></button>
-            </div>
-            <div class="brends-list__block">
-                <img src="img/serviced-brends__png/sony.png" alt="Sony" height="25.6px" width="128px"
-                    class="brends-list__logo">
-                <button class="brends-list__button"><img src="img/svg/go.svg"></button>
-            </div>
-            <div class="brends-list__block">
-                <img src="img/serviced-brends__png/lenovo.png" alt="Lenovo" height="32px" width="128px"
-                    class="brends-list__logo">
-                <button class="brends-list__button"><img src="img/svg/go.svg"></button>
-            </div>
-            <div class="brends-list__block">
-                <img src="img/serviced-brends__png/samsung.png" height="38.52px" width="116px" alt="Samsung"
-                    class="brends-list__logo">
-                <button class="brends-list__button"><img src="img/svg/go.svg"></button>
-            </div>
-            <div class="brends-list__block">
-                <img src="img/serviced-brends__png/apple.png" alt="Apple" height="44px" width="44px"
-                    class="brends-list__logo">
-                <button class="brends-list__button"><img src="img/svg/go.svg">
-                </button>
+            <div class="slider-container">
+                <div class="swiper-container brends-list__swiper">
+                    <button class="swiper-button-prev"></button>
+                    <button class="swiper-button-next"></button>
+                    <div class="swiper-wrapper brends-list__items-list">
+                        <div class="brends-list__block swiper-slide">
+                            <img src="img/serviced-brends__png/lenovo.png" alt="Lenovo" height="32px" width="128px"
+                                class="brends-list__logo">
+                            <button class="brends-list__button"><img src="img/svg/go.svg"></button>
+                        </div>
+                        <div class="brends-list__block swiper-slide">
+                            <img src="img/serviced-brends__png/samsung.png" height="38.52px" width="116px" alt="Samsung"
+                                class="brends-list__logo">
+                            <button class="brends-list__button"><img src="img/svg/go.svg"></button>
+                        </div>
+                        <div class="brends-list__block swiper-slide">
+                            <img src="img/serviced-brends__png/apple.png" alt="Apple" height="44px" width="44px"
+                                class="brends-list__logo">
+                            <button class="brends-list__button"><img src="img/svg/go.svg"></button>
+                        </div>
+                        <div class="brends-list__block swiper-slide">
+                            <img src="img/serviced-brends__png/viewsonic.png" alt="Viewsonic" height="21px"
+                                width="128px" class="brends-list__logo">
+                            <button class="brends-list__button"><img src="img/svg/go.svg"></button>
+                        </div>
+                        <div class="brends-list__block swiper-slide">
+                            <img src="img/serviced-brends__png/bosch.png" alt="Bosch" height="28.6px" width="128px"
+                                class="brends-list__logo">
+                            <button class="brends-list__button"><img src="img/svg/go.svg"></button>
+                        </div>
+                        <div class="brends-list__block swiper-slide">
+                            <img src="img/serviced-brends__png/hp.png" alt="Hp" height="52px" width="52px"
+                                class="brends-list__logo">
+                            <button class="brends-list__button"><img src="img/svg/go.svg"></button>
+                        </div>
+                        <div class="brends-list__block swiper-slide">
+                            <img src="img/serviced-brends__png/acer.png" alt="Acer" height="24px" width="94px"
+                                class="brends-list__logo">
+                            <button class="brends-list__button"><img src="img/svg/go.svg"></button>
+                        </div>
+                        <div class="brends-list__block swiper-slide">
+                            <img src="img/serviced-brends__png/sony.png" alt="Sony" height="25.6px" width="128px"
+                                class="brends-list__logo">
+                            <button class="brends-list__button"><img src="img/svg/go.svg"></button>
+                        </div>
+                        <div class="brends-list__block swiper-slide">
+                            <img src="img/serviced-brends__png/lenovo.png" alt="Lenovo" height="32px" width="128px"
+                                class="brends-list__logo">
+                            <button class="brends-list__button"><img src="img/svg/go.svg"></button>
+                        </div>
+                        <div class="brends-list__block swiper-slide">
+                            <img src="img/serviced-brends__png/samsung.png" height="38.52px" width="116px" alt="Samsung"
+                                class="brends-list__logo">
+                            <button class="brends-list__button"><img src="img/svg/go.svg"></button>
+                        </div>
+                        <div class="brends-list__block swiper-slide">
+                            <img src="img/serviced-brends__png/apple.png" alt="Apple" height="44px" width="44px"
+                                class="brends-list__logo">
+                            <button class="brends-list__button"><img src="img/svg/go.svg">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="brends-list__pagination swiper-pagination"></div>
             </div>
         </section>
         <div class="brends-list__show-img">
@@ -81,17 +89,11 @@
         <label for="button-show-more">
             <div class="brends-list__label-check-box"></div>
         </label>
-        <div class="slider-container">
-            <div class="swiper-container slider-container-initialised swiper-container-horizontal">
-                <div class="swiper-wrapper"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
 
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="scripts/swiper/swiper.js"></script>
+
 </body>
 
 </html>
