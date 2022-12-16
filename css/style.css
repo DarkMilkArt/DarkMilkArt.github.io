@@ -614,9 +614,10 @@ section.aside-bar__list button:focus{
 
     @media (min-width:551px){
         .brends-list__items-list{
+            gap:16px 14px;
         display: flex;
         padding:0;
-        gap: 16px 32px;        
+        justify-content: space-between;       
         flex-wrap: wrap;
     }
     }
@@ -673,14 +674,18 @@ section.aside-bar__list button:focus{
     }
 
     .brends-list__block {
+        flex:1 1 214px;
         height: 72px;
-        width: 240px;
+        flex-shrink: 1;
+        min-width: 214px;
+        max-width: 240px;
         padding: 16px;
         background-color: #fff;
         border: 1px solid #EAEAEA;
         border-radius: 6px;
         display: flex;
         align-items: center;
+        box-sizing: border-box;
         justify-content: space-between;
         box-sizing: border-box;
     }
