@@ -24,50 +24,30 @@
         prevEl: '.swiper-button-prev',        
         },          
     });
-}})
-
-let buttonShowHide = document.querySelector('.button-show-more');
-let showText = document.querySelector('.brends-list__show-all-text::after');
-let hideText = document.querySelector('.brends-list__show-all-text::before');
-let iconShowHide = document.querySelector('.brends-list__show-img');
-
-
-window.addEventListener('resize', function() {
-    var desctopElements = {
-        showText,
-        hideText,
-        buttonShowHide,
-        iconShowHide,
-   };
-  const width = window.innerWidth;
-  if (width < 550){  
-
- for ( let i=0; i <= desctopElements.length; i++ ){
-    var elementHide;
-     let item = desctopElements[i].classList.add('hidden');
-     elementHide +=  item;
-    
- } return elementHide;
-}
-});
-// hideFunction(desctopElements);
+} else {
+swiper.classList.remove('swiper-container');
+pagination.classList.add('hidden');
+}}
+)
 
 
-//  addClass = function(elememt, elementClass) {
-//    item = elememt.classList.add(elementClass);
-//  return item;
-//  }
-//  addClass(showText,'hidden');
-//  addClass(hideText,'hidden');
-//  addClass(buttonShowHide,'hidden');
-//  addClass(iconShowHide,'hidden');
-//  showText.classList.add('hidden');
-//  hideText.classList.add('hidden');
-//  buttonShowHide.classList.add('hidden');
-//  iconShowHide.classList.add('hidden');
+// window.addEventListener('resize', function() {
+//     let width = window.innerWidth;
+//     if (width < 550){ 
+      
+//     const buttonShowHide = document.querySelector('.brends-list__label-check-box');
+//     const showText = document.querySelector('.brends-list__show-all-text');
+//     const iconShowHide = document.querySelector('.brends-list__show-img');
+//     showText.remove();
+//     const desctopElements = [        
+//         buttonShowHide,
+//         iconShowHide, ];     
+//         for(i=0;i<desctopElements.length;i++){
+//             desctopElements[i].classList.toggle('hidden');
+//         }    
+//         console.log(iconShowHide);
+//     }
+// });
 
-// } else {
-// const swiper = document.querySelector('.brends-list__swiper');
-// swiper.classList.remove('swiper-container');
-// pagination.classList.add('hidden');
-// }
+
+

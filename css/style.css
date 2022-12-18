@@ -613,13 +613,13 @@ section.aside-bar__list button:focus{
     }
 
     @media (min-width:551px){
-        .brends-list__items-list{
-            gap:16px 14px;
-        display: flex;
-        padding:0;
-        justify-content: space-between;       
-        flex-wrap: wrap;
-    }
+        .brends-list__items-list{        
+            gap: 16px 24px;
+            display: flex;
+            padding:0;
+            justify-content: flex-start;       
+            flex-wrap: wrap;
+        }
     }
 
     .brends-list__button-show-more:checked ~ 
@@ -673,12 +673,13 @@ section.aside-bar__list button:focus{
         right: 0;
     }
 
+    .swiper-slide,
     .brends-list__block {
-        flex:1 1 214px;
+        
         height: 72px;
-        flex-shrink: 1;
-        min-width: 214px;
-        max-width: 240px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        width: 240px;
         padding: 16px;
         background-color: #fff;
         border: 1px solid #EAEAEA;
@@ -686,8 +687,12 @@ section.aside-bar__list button:focus{
         display: flex;
         align-items: center;
         box-sizing: border-box;
-        justify-content: space-between;
-        box-sizing: border-box;
+        justify-content: space-between;       
+    }
+    @media(max-width:840px) {
+        .brends-list__items-list div.brends-list__block{
+            width: 214px;
+        }  
     }
     
 
