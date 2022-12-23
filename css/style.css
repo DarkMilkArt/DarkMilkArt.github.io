@@ -40,11 +40,6 @@ body{
 /*всплывающее меню*/
 
 
-/*Всплывающее меню*/
-
-
-
-
 /*aside-bar style*/
 
 
@@ -304,6 +299,193 @@ and (max-device-width:1099px){
 	.aside-bar--show{		
 	}
 }
+
+
+/*request-menu style*/
+.request-menu{
+    display: block;
+    height: auto;
+    margin: 0%;
+    width: 0;
+    height: 100%;
+    z-index: 1000;
+    background-color:rgba(255, 255, 255, 0%);
+    position: absolute;
+    right: 0;   
+    overflow: hidden;
+    transition:  width 0.6s;           
+}
+
+.request-menu--show{     
+    width: 100%;
+    overflow: hidden; 
+}
+
+.request{
+    height: 100%;
+    transform: translate(360px, 0);
+    transition: 0.5s transform ease-in, 0.5s box-shadow;
+    box-shadow: rgba(250, 250, 250, 0%) 20px 0 0px 0px,#454f7e1a -20px 0 20px;
+    padding: 16px 32px;
+	display: flex;
+	background-color:#fff;
+	justify-content: flex-start;
+	align-content: space-between;
+	width: 320px;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	box-sizing: border-box;
+    min-height: 100vh;
+    float: right;
+}
+
+.request--show{
+    transform: translate(0, 0);
+    transition: 1s transform ease-in;
+    box-shadow: rgba(250, 250, 250, 90%) -300px 0 200px 300px,
+    #454f7e1a -20px 0 20px;
+}
+
+.request__title {
+    font-family: 'TTLakes';
+    font-weight: 700;
+    color: #000;   
+}
+
+.request__title::before {
+    content: '';
+    border-right: 4px solid #41F6D7;
+    border-radius: 8px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    margin-left: -32px;
+}
+
+.request__name {
+    border-radius:8px;
+    border: 1px solid #B5B6BC;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding:0 16px;
+    align-items: center;
+    font-family: 'TTLakes';
+    font-weight: 400;
+    margin: 8px 0;
+}
+
+.request__tel {
+    border-radius:8px;
+    border: 1px solid #B5B6BC;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding:0 16px;
+    align-items: center;
+    font-family: 'TTLakes';
+    font-weight: 400;
+    margin: 8px 0;
+}
+
+
+.request__email {
+    border-radius:8px;
+    border: 1px solid #B5B6BC;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding:0 16px;
+    align-items: center;
+    font-family: 'TTLakes';
+    font-weight: 400;
+    margin: 8px 0;
+}
+
+.request__textarea {
+    border-radius:8px;
+    border: 1px solid #B5B6BC;
+    height: 118px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding:0 16px;
+    padding-top: 16px;
+    align-items: center;
+    font-family: 'TTLakes';
+    font-weight: 400;
+    margin: 8px 0;
+}
+
+.request__text{
+    font-family: 'TTLakes';
+    font-weight: 400;
+    color: #000;
+    margin: 8px 0;
+}
+
+.request__text>a{
+    font-family: 'TTLakes';
+    font-weight: 400;
+    text-decoration: none;
+    color: #FF3E79;
+}
+
+.request__button{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap:nowrap;
+    margin: 8px 0;
+}
+
+.request__button button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap:nowrap;
+    height: 32px;
+    width: 136px;
+    background-color: #FF3E79;
+    border-radius: 16px;
+    align-items: center;
+}
+
+.request__button p{
+    display: block;
+    margin: 0;
+    font-family: 'TTLakes';
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+@media (max-width:550px){
+
+    .request__close {
+        align-self: flex-start;
+        display:block;
+        position: relative;
+    }
+}
+
+
+@media (min-width:551px){
+    .request__close {
+        align-self: flex-start;
+        display:block;
+        position: absolute;
+        margin-left: -100px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+}
+
 
 
 /**/
@@ -1194,12 +1376,13 @@ article.services{
 
     .swiper-pagination{       
         transform: scale(1) translateY(5px);
+        width: 100px;
+        height: 20px;
     }  
 
     .swiper-pagination-bullet{
         background-color: #ddd; 
-        opacity: 1;  
-        transform: scale(1)     
+        opacity: 1;        
     }
 
     .swiper-pagination-bullet-active{

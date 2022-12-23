@@ -11,6 +11,9 @@
 </head>
 
 <body>
+
+
+
   <section class="main-menu" style="transition: 1s transform 0.2s;">
     <article class="aside-bar" style="transition: 0.5s transform ease-in, 0.5s box-shadow;">
       <div class="aside-bar__top">
@@ -34,13 +37,13 @@
       </section>
       <div class="aside-bar__footer">
         <div class="aside-bar__footer__contacts">
-          <button class="aside-bar__footer__contacts__call" name="call">
+          <button class="contacts__call" name="call">
             <img src="img/svg/call.svg" alt="call" name="call">
           </button>
-          <button class="aside-bar__footer__contacts__chat" name="chat">
+          <button class="contacts__chat" name="chat">
             <img src="img/svg/chat.svg" alt="chat" name="chat">
           </button>
-          <button class="aside-bar__footer__contacts__profile" name="profile">
+          <button class="contacts__profile" name="profile">
             <img src="img/svg/profile.svg" alt="profile" name="profile">
           </button>
         </div>
@@ -57,10 +60,38 @@
             CH
           </button>
         </div>
-
       </div>
     </article>
   </section>
+
+
+  <section class="request-menu">
+    <article class="request" style="transition: 0.5s transform ease-in, 0.5s box-shadow;">
+      <button class="request__close">
+        <img src="img/svg/burger-close.svg" alt="close" name="close">
+      </button>
+      <h2 class="request__title">Обратная связь</h2>
+      <input class="request__name" type="text" placeholder="Имя" id="name" name="name" required size="10">
+      <input class="request__tel" type="tel" format='+7 (__) ___-__-__' pattern="\+?[0-9\s\-\(\)]+"
+        placeholder="Телефон" id="tel" name="tel" required minlength="11" maxlength="16" size="10">
+      <input class="request__email" type="email" placeholder="Электронная почта" id="email" name="email" minlength="4"
+        size="10">
+      <textarea class="request__textarea" name="" placeholder="Сообщение" id="" cols="30" rows="10"></textarea>
+      <p class="request__text">Нажимая “отправить”, вы даете согласие на <a href="">обработку персональных данных</a> и
+        соглашаетесь с нашей
+        <a href="">политикой конфиденциальности</a>
+      </p>
+      <div class="request__button">
+        <button type="submit">
+          <p>Отправить</p> <img src="img/svg/goside.svg">
+        </button>
+      </div>
+      </div>
+    </article>
+  </section>
+
+
+
   <header>
     <article>
       <div class="nav-buttons">
@@ -72,9 +103,12 @@
       </div>
       <span class="communicate-status-buttons">
         <div class="comunnicate-buttons">
-          <img src="img/svg/call.svg" height="40px" width="40px" alt="Позвонить">
-          <img src="img/svg/chat.svg" height="40px" width="40px" alt="Чат">
-          <img src="img/svg/profile.svg" height="40px" width="40px" alt="Профиль">
+
+          <button class="contacts__call"><img src="img/svg/call.svg" height="40px" width="40px"
+              alt="Позвонить"></button>
+          <button class="contacts__chat"><img src="img/svg/chat.svg" height="40px" width="40px" alt="Чат"></button>
+          <button class="contacts__profile"> <img src="img/svg/profile.svg" height="40px" width="40px"
+              alt="Профиль"></button>
         </div>
         <div class="divider"></div>
         <span>
@@ -135,12 +169,11 @@
               <pre>Отзывы</pre>
             </button>
           </div>
-
         </div>
-
       </div>
     </nav>
   </header>
+
   <main class="about-us">
     <span>
       <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell.

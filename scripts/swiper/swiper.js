@@ -8,7 +8,7 @@
         const sliderDevices = sliders[1];
         const sliderServices = sliders[2];
                
-    const slider = {
+    let swiper = {
         direction: 'horizontal',    
         spaceBetween: 16,
         slidesPerView: 2,
@@ -17,8 +17,8 @@
     
         
         pagination: {
-        el: '.swiper-pagination',  
-        type:'bullets',      
+        el: '.swiper-pagination', 
+        type:'bullets'     
         },
     
         
@@ -27,14 +27,14 @@
         prevEl: '.swiper-button-prev',        
         },          
     }; 
-    const swiperBrends = new Swiper(sliderBrends, slider);
-    const swiperDevices = new Swiper(sliderDevices, slider);
-    const swiperServices = new Swiper(sliderServices, slider);
-} else {
-swiper.classList.remove('swiper-container');
-pagination.classList.add('hidden');
+    const swiperBrends = new Swiper(sliderBrends, swiper);
+    const swiperDevices = new Swiper(sliderDevices, swiper);
+    const swiperServices = new Swiper(sliderServices, swiper);
+
 }}
 )
+
+
 
 
 const burgerButton = document.querySelector('.nav-buttons__menu');
@@ -57,8 +57,49 @@ hideMenu.addEventListener('click',function(){
         menu.classList.remove('main-menu--show');       
     }
 return clickingClose();
-}
-)
+})
+
+const requestButtons = document.querySelectorAll('.contacts__chat');
+const popupRequestButton = requestButtons[0];
+const titleRequestButton = requestButtons[1];
+
+titleRequestButton.addEventListener('click', function(){  
+    const requestMenu = document.querySelector('.request-menu');
+    const requestBar = requestMenu.querySelector('.request');    
+
+    const clicking = function () {
+      requestMenu.classList.add('request-menu--show');
+      requestBar.classList.add('request--show');        
+    }
+return clicking();
+})
+
+popupRequestButton.addEventListener('click', function () {  
+    const requestMenu = document.querySelector('.request-menu');
+    const requestBar = requestMenu.querySelector('.request');
+    const menu = document.querySelector('.main-menu');
+    const asideBar = menu.querySelector('.aside-bar');
+
+    const clicking = function () {
+      requestMenu.classList.add('request-menu--show');
+        requestBar.classList.add('request--show');
+        asideBar.classList.remove('aside-bar--show');
+      menu.classList.remove('main-menu--show');
+    }
+return clicking();
+})
+
+const hideRequest = document.querySelector('.request__close')
+hideRequest.addEventListener('click', function () {
+    const requestMenu = document.querySelector('.request-menu');
+    const requestBar = requestMenu.querySelector('.request');
+
+    const clickingClose = function () {      
+        requestBar.classList.remove('request--show');
+        requestMenu.classList.remove('request-menu--show');       
+    }
+return clickingClose();
+})
 
 
 // window.addEventListener('resize', function() {
