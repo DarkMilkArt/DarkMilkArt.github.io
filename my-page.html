@@ -36,7 +36,7 @@
         <button href="" order="8">Контакты</button>
       </section>
       <div class="aside-bar__footer">
-        <div class="aside-bar__footer__contacts">
+        <div class="aside-bar__contacts">
           <button class="contacts__call" name="call">
             <img src="img/svg/call.svg" alt="call" name="call">
           </button>
@@ -47,18 +47,21 @@
             <img src="img/svg/profile.svg" alt="profile" name="profile">
           </button>
         </div>
-        <p class="aside-bar__footer__mail">mail@cps.com</p>
-        <p class="aside-bar__footer__phone">8 800 890 8900</p>
-        <div class="aside-bar__footer__language-change">
-          <button checked class="aside-bar__footer__language-change__RU" name="RU">
-            RU
-          </button>
-          <button class="aside-bar__footer__language-change__EN" name="EN">
-            EN
-          </button>
-          <button class="aside-bar__footer__language-change__CH" name="CH">
-            CH
-          </button>
+        <p class="aside-bar__mail">mail@cps.com</p>
+        <p class="aside-bar__phone">8 800 890 8900</p>
+        <div class="aside-bar__language-change">
+          <label for="language__RU">
+            <input id="language__RU" type="radio" value="RU" class="aside-bar__RU" name="language" checked>
+            <p class="aside-bar__RU">RU</p>
+          </label>
+          <label for="language__EN">
+            <input id="language__EN" type="radio" value="EN" class="aside-bar__EN" name="language">
+            <p class="aside-bar__EN">EN</p>
+          </label>
+          <label for="language__CH">
+            <input id="language__CH" type="radio" value="CH" class="aside-bar__CH" name="language">
+            <p class="aside-bar__CH">CH</p>
+          </label>
         </div>
       </div>
     </article>
@@ -82,6 +85,28 @@
         <a href="">политикой конфиденциальности</a>
       </p>
       <div class="request__button">
+        <button type="submit">
+          <p>Отправить</p> <img src="img/svg/goside.svg">
+        </button>
+      </div>
+      </div>
+    </article>
+  </section>
+
+
+  <section class="call-menu">
+    <article class="call" style="transition: 0.5s transform ease-in, 0.5s box-shadow;">
+      <button class="call__close">
+        <img src="img/svg/burger-close.svg" alt="close" name="close">
+      </button>
+      <h2 class="call__title">Заказать звонок</h2>
+      <input class="request__tel" type="tel" format='+7 (__) ___-__-__' pattern="\+?[0-9\s\-\(\)]+"
+        placeholder="Телефон" id="tel" name="tel" required minlength="11" maxlength="16" size="10">
+      <p class="call__text">Нажимая “отправить”, вы даете согласие на <a href="">обработку персональных данных</a> и
+        соглашаетесь с нашей
+        <a href="">политикой конфиденциальности</a>
+      </p>
+      <div class="call__button">
         <button type="submit">
           <p>Отправить</p> <img src="img/svg/goside.svg">
         </button>

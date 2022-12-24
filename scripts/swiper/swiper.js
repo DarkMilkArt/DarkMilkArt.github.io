@@ -8,7 +8,7 @@
         const sliderDevices = sliders[1];
         const sliderServices = sliders[2];
                
-    let swiper = {
+    const swiper = {
         direction: 'horizontal',    
         spaceBetween: 16,
         slidesPerView: 2,
@@ -18,14 +18,18 @@
         
         pagination: {
         el: '.swiper-pagination', 
-        type:'bullets'     
+        type:'bullets',     
         },
     
         
         navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',        
-        },          
+        },  
+
+        scrollbar: {
+            el: '.swiper-scrollbar',
+          },        
     }; 
     const swiperBrends = new Swiper(sliderBrends, swiper);
     const swiperDevices = new Swiper(sliderDevices, swiper);
@@ -35,7 +39,7 @@
 )
 
 
-
+// main-menu
 
 const burgerButton = document.querySelector('.nav-buttons__menu');
 burgerButton.addEventListener('click',function(){
@@ -58,6 +62,8 @@ hideMenu.addEventListener('click',function(){
     }
 return clickingClose();
 })
+
+// request-menu
 
 const requestButtons = document.querySelectorAll('.contacts__chat');
 const popupRequestButton = requestButtons[0];
@@ -97,6 +103,52 @@ hideRequest.addEventListener('click', function () {
     const clickingClose = function () {      
         requestBar.classList.remove('request--show');
         requestMenu.classList.remove('request-menu--show');       
+    }
+return clickingClose();
+})
+
+// call-menu
+
+
+
+const callButtons = document.querySelectorAll('.contacts__call');
+const popupCallButton = callButtons[0];
+const titleCallButton = callButtons[1];
+
+titleCallButton.addEventListener('click', function(){  
+    const callMenu = document.querySelector('.call-menu');
+    const callBar = callMenu.querySelector('.call');    
+
+    const clicking = function () {
+      callMenu.classList.add('call-menu--show');
+      callBar.classList.add('call--show');        
+    }
+return clicking();
+})
+
+popupCallButton.addEventListener('click', function () {  
+    const callMenu = document.querySelector('.call-menu');
+    const callBar = callMenu.querySelector('.call');
+    const menu = document.querySelector('.main-menu');
+    const asideBar = menu.querySelector('.aside-bar');
+
+    const clicking = function () {
+      callMenu.classList.add('call-menu--show');
+        callBar.classList.add('call--show');
+        asideBar.classList.remove('aside-bar--show');
+      menu.classList.remove('main-menu--show');
+    }
+return clicking();
+})
+
+const hideCall = document.querySelector('.call__close')
+hideCall.addEventListener('click', function () {
+    const callMenu = document.querySelector('.call-menu');
+    const callBar = callMenu.querySelector('.call');
+
+    const clickingClose = function () {      
+        callBar.classList.remove('call--show');
+        callMenu.classList.remove('call-menu--show');       
     }
 return clickingClose();
 })
