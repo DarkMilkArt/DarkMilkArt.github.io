@@ -21,7 +21,7 @@
           <img src="img/svg/burger-close.svg" alt="close" name="close">
         </button>
         <img class="top__logo" src="img/svg/logo.svg" alt="logo" name="logo">
-        <button class="top__search" name="search">
+        <button class="top__search" style="height: 40px; width: 40px;" name="search">
           <img src="img/svg/search.svg" alt="search" name="search">
         </button>
       </div>
@@ -37,13 +37,13 @@
       </section>
       <div class="aside-bar__footer">
         <div class="aside-bar__contacts">
-          <button class="contacts__call" name="call">
+          <button class="contacts__call" style="height: 40px; width: 40px;" name="call">
             <img src="img/svg/call.svg" alt="call" name="call">
           </button>
-          <button class="contacts__chat" name="chat">
+          <button class="contacts__chat" style="height: 40px; width: 40px;" name="chat">
             <img src="img/svg/chat.svg" alt="chat" name="chat">
           </button>
-          <button class="contacts__profile" name="profile">
+          <button class="contacts__profile" style="height: 40px; width: 40px;" name="profile">
             <img src="img/svg/profile.svg" alt="profile" name="profile">
           </button>
         </div>
@@ -70,7 +70,7 @@
 
   <section class="request-menu">
     <article class="request" style="transition: 0.5s transform ease-in, 0.5s box-shadow;">
-      <button class="request__close">
+      <button class="request__close" style="height: 40px; width: 40px;">
         <img src="img/svg/burger-close.svg" alt="close" name="close">
       </button>
       <h2 class="request__title">Обратная связь</h2>
@@ -96,12 +96,12 @@
 
   <section class="call-menu">
     <article class="call" style="transition: 0.5s transform ease-in, 0.5s box-shadow;">
-      <button class="call__close">
+      <button class="call__close" style="height: 40px; width: 40px;">
         <img src="img/svg/burger-close.svg" alt="close" name="close">
       </button>
       <h2 class="call__title">Заказать звонок</h2>
-      <input class="request__tel" type="tel" format='+7 (__) ___-__-__' pattern="\+?[0-9\s\-\(\)]+"
-        placeholder="Телефон" id="tel" name="tel" required minlength="11" maxlength="16" size="10">
+      <input class="call__tel" type="tel" format='+7 (__) ___-__-__' pattern="\+?[0-9\s\-\(\)]+" placeholder="Телефон"
+        id="tel" name="tel" required minlength="11" maxlength="16" size="10">
       <p class="call__text">Нажимая “отправить”, вы даете согласие на <a href="">обработку персональных данных</a> и
         соглашаетесь с нашей
         <a href="">политикой конфиденциальности</a>
@@ -120,8 +120,8 @@
   <header>
     <article>
       <div class="nav-buttons">
-        <button class="nav-buttons__menu"><img class="menu" src="img/svg/burger.svg" height="40px" width="40px"
-            alt="Меню"></button>
+        <button class="nav-buttons__menu">
+          <img class="menu" src="img/svg/burger.svg" height="40px" width="40px" alt="Меню"></button>
         <div class="divider"></div>
         <img class="nav-buttons__logo" src="img/svg/logo.svg" format="svg" alt="logo">
         <div class="divider"></div>
@@ -129,8 +129,8 @@
       <span class="communicate-status-buttons">
         <div class="comunnicate-buttons">
 
-          <button class="contacts__call"><img src="img/svg/call.svg" height="40px" width="40px"
-              alt="Позвонить"></button>
+          <button class="contacts__call" style="height: 40px; width: 40px;"><img src="img/svg/call.svg" height="40px"
+              width="40px" alt="Позвонить"></button>
           <button class="contacts__chat"><img src="img/svg/chat.svg" height="40px" width="40px" alt="Чат"></button>
           <button class="contacts__profile"> <img src="img/svg/profile.svg" height="40px" width="40px"
               alt="Профиль"></button>
@@ -280,7 +280,7 @@
               </div>
             </div>
           </div>
-          <div class="brends-list__pagination swiper-pagination"></div>
+          <div class="brends-pag swiper-pagination"></div>
         </div>
       </section>
       <div class="brends-list__show-img">
@@ -291,6 +291,8 @@
         <div class="brends-list__label-check-box"></div>
       </label>
     </section>
+
+
     <section class="devices-list">
       <p class="devices-list__description">Ремонт различных видов техники</p>
       <input type="checkbox" id="devices-button-show-more" class="devices-list__button-show-more" name="Показать все"
@@ -319,7 +321,7 @@
               </div>
             </div>
           </div>
-          <div class="devices-list__pagination swiper-pagination"></div>
+          <div class="devices-pag swiper-pagination"></div>
         </div>
       </section>
       <div class="devices-list__show-img">
@@ -333,8 +335,6 @@
     </section>
     <section class="services-list">
       <p class="services-list__description">Цена на услуги</p>
-      <input type="checkbox" id="services-button-show-more" class="services-list__button-show-more" name="Показать все"
-        value="show">
       <section class="services-list__items">
         <div class="slider-container">
           <div class="swiper-container services-list__swiper">
@@ -345,12 +345,10 @@
                 <p>Ремогтные услуги</p>
                 <p>Цена</p>
                 <p>Срок</p>
-
               </div>
               <div class="services-list__block swiper-slide">
                 <p>Диагностика</p>
                 <p>Бесплатно</p>
-
                 <p>30 мин</p>
                 <div>
                   <button class="services-list__button">Заказать<img src="img/svg/goside.svg"></button>
@@ -359,7 +357,6 @@
               <div class="services-list__block swiper-slide">
                 <p>Замена дисплея</p>
                 <p>1000 ₽</p>
-
                 <p>30-120 мин</p>
                 <div>
                   <button class="services-list__button">Заказать<img src="img/svg/goside.svg"></button>
@@ -368,7 +365,6 @@
               <div class="services-list__block swiper-slide">
                 <p>Замена полифонического динамика</p>
                 <p>1000 ₽</p>
-
                 <p>30-120 мин</p>
                 <div>
                   <button class="services-list__button">Заказать<img src="img/svg/goside.svg"></button>
@@ -392,17 +388,12 @@
               </div>
             </div>
           </div>
-          <div class="services-list__pagination swiper-pagination"></div>
+          <div class="services-pag swiper-pagination"></div>
         </div>
       </section>
-      <div class="services-list__show-img">
-        <img class="services-list__show-svg" height="10.29px" width="7.41px" src="img/svg/read-next.svg">
-      </div>
-      <p class="services-list__show-all-text"></p>
-      <label for="services-button-show-more">
-        <div class="services-list__label-check-box"></div>
-      </label>
     </section>
+
+
     <div class="offer">
       <p class="offer__text">Все цены указаны с учетом НДС.
         Стоимость ремонта указана на единичную услугу.

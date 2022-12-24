@@ -3,12 +3,12 @@
      const width = window.innerWidth;
     if (width < 550){        
         
-        const sliders = document.querySelectorAll('.swiper-container');
-        const sliderBrends = sliders[0];
-        const sliderDevices = sliders[1];
-        const sliderServices = sliders[2];
+        const sliderBrends = document.querySelector('.brends-list__swiper');
+        const sliderDevices = document.querySelector('.devices-list__swiper');
+        const sliderServices = document.querySelector('.services-list__swiper');
+        
                
-    const swiper = {
+    const brendsSwiper = {
         direction: 'horizontal',    
         spaceBetween: 16,
         slidesPerView: 2,
@@ -17,7 +17,7 @@
     
         
         pagination: {
-        el: '.swiper-pagination', 
+        el: '.brends-pag', 
         type:'bullets',     
         },
     
@@ -25,16 +25,54 @@
         navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',        
-        },  
-
-        scrollbar: {
-            el: '.swiper-scrollbar',
-          },        
+        },         
     }; 
-    const swiperBrends = new Swiper(sliderBrends, swiper);
-    const swiperDevices = new Swiper(sliderDevices, swiper);
-    const swiperServices = new Swiper(sliderServices, swiper);
 
+
+    const devicesSwiper = {
+        direction: 'horizontal',    
+        spaceBetween: 16,
+        slidesPerView: 2,
+        centeredSlides: true,
+        slidesOffsetBefore: -110,
+    
+        
+        pagination: {
+        el: '.devices-pag', 
+        type:'bullets',     
+        },
+    
+        
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',        
+        },         
+    }; 
+
+    const servicesSwiper = {
+        direction: 'horizontal',    
+        spaceBetween: 16,
+        slidesPerView: 2,
+        centeredSlides: true,
+        slidesOffsetBefore: -110,
+    
+        
+        pagination: {
+        el: '.services-pag', 
+        type:'bullets',          
+        },
+    
+        
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',        
+        },         
+    }; 
+
+
+    const swiperBrends = new Swiper(sliderBrends, brendsSwiper);
+    const swiperDevices = new Swiper(sliderDevices, devicesSwiper);
+    const swiperServices = new Swiper(sliderServices, servicesSwiper);
 }}
 )
 
@@ -109,8 +147,6 @@ return clickingClose();
 
 // call-menu
 
-
-
 const callButtons = document.querySelectorAll('.contacts__call');
 const popupCallButton = callButtons[0];
 const titleCallButton = callButtons[1];
@@ -152,25 +188,3 @@ hideCall.addEventListener('click', function () {
     }
 return clickingClose();
 })
-
-
-// window.addEventListener('resize', function() {
-//     let width = window.innerWidth;
-//     if (width < 550){ 
-      
-//     const buttonShowHide = document.querySelector('.brends-list__label-check-box');
-//     const showText = document.querySelector('.brends-list__show-all-text');
-//     const iconShowHide = document.querySelector('.brends-list__show-img');
-//     showText.remove();
-//     const desctopElements = [        
-//         buttonShowHide,
-//         iconShowHide, ];     
-//         for(i=0;i<desctopElements.length;i++){
-//             desctopElements[i].classList.toggle('hidden');
-//         }    
-//         console.log(iconShowHide);
-//     }
-// });
-
-
-
