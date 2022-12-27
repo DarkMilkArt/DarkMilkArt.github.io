@@ -35,6 +35,13 @@ body{
     position: relative;
     height: auto;
 }
+@media (min-width:1440px){
+    body{
+        width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 
 
@@ -55,6 +62,7 @@ body{
 	flex-wrap: nowrap;
 	box-sizing: border-box;
     min-height: 100vh;
+    position: fixed;
 }
 
 .aside-bar__top{
@@ -213,11 +221,11 @@ section.aside-bar__list button:hover{
 }
 
 .aside-bar__contacts{
-    width: 152px;
+    width: 145px;
     display: flex;
     justify-content:space-between;
     margin-bottom: -2px;		
-			margin-top: 274px;		
+			margin-top: 100px;		
 }
 
 .aside-bar__mail{
@@ -301,13 +309,14 @@ input.aside-bar__CH:checked ~ p.aside-bar__CH{
     height: 100%;
     transform: translate(-330px, 0);
     transition: 0.5s transform ease-in, 0.5s box-shadow;
-		box-shadow: rgba(250, 250, 250, 2%) -20px 0 100px 10px,#454f7e1a 20px 0 20px;
+	box-shadow: rgba(250, 250, 250, 2%) -20px 0 100px 10px,#454f7e1a 20px 0 20px;
 }
 
 .aside-bar--show{
     transform: translate(0, 0);
     transition: 1s transform ease-in;
 		box-shadow: rgba(250, 250, 250, 90%) 600px 0 100px 600px, #454f7e1a 20px 0 20px;
+        position: fixed;
 }
 }
 
@@ -326,8 +335,11 @@ and (max-device-width:1099px){
 		.main-menu{
 			float: left;
 			display: block;			
-			margin: 0%;			
-			height: 100%;		
+			margin-left: 0;	
+            margin-top: 0;	
+            margin-bottom: 0;
+            margin-right: 320px;		
+			height: 1801px;		
 			background-color:rgba(255, 255, 255, 0%);
 			position: relative;   
 	}	
@@ -340,11 +352,11 @@ and (max-device-width:1099px){
 		width: auto;
 	}
 	.aside-bar__contacts{
-		margin-top: 270px;
+		margin-top: 150px;
 	}
 
 	.aside-bar{
-			height: 100vh;			
+			height: 1723px;			
 	}	
 }
 
@@ -946,9 +958,87 @@ main.about-us{
     padding: 0;
 }
 
-main p{
+
+/* механика скрытия текста "о нас" */
+
+.about-us__text-container{
+    overflow-y: hidden;
+    height: 110px;
+    transition: all 0.9s ease;
+}
+
+.about-us__text-container p{
 margin-top: 0;
  }
+
+
+
+ .about-us__read-more-checkbox:checked ~ 
+    .about-us__text-container{
+        display: flex;
+        padding:0;  
+        margin: 0; 
+        height: 300px;                
+    } 
+
+	.about-us__read-more-text {
+        margin-top: 10px;
+        margin-left: 16px;
+    }
+    .about-us>span>img{
+        margin-top: 16px;
+    }
+
+    @media (max-width:550px) {  
+        .about-us__read-more-text {
+            margin-top: -20px;
+            margin-left: 32px;
+        }  
+        
+    }
+
+	.about-us__read-more-checkbox:hover ~ 
+		.about-us__read-next>p::after,
+    .about-us__read-more-checkbox:hover ~ 
+		.about-us__read-next>p::before{       
+		color:#7e7e7e;			
+    }	
+	
+
+	#read-more:checked ~ 
+	.about-us__read-more-text::before{       	
+		display: none;			
+    }
+
+    .about-us__read-more-checkbox:checked ~ 
+    .about-us__read-more-text::after{       	
+		display: block;			
+    }
+
+ .about-us__read-more-text::before{
+margin-top: 0;
+content: 'Читать далее';
+display: block;
+ }
+
+  .about-us__read-more-text::after{
+margin-top: 0;
+content: 'Скрыть';
+display: none;
+ }
+
+ .label-for-read-more{
+width: 150px;
+height: 20px;
+position:absolute;
+ }
+
+ .about-us__read-more-checkbox{
+    display: none;
+ }
+
+/**/
+
 
 .about-us span{
   padding-left: 24px;
@@ -956,6 +1046,7 @@ margin-top: 0;
   justify-content: flex-start;
   font-family: 'TTLakes';
   font-weight: 400;
+  align-content: flex-start;
 }
 
 .about-us__img>img{
@@ -1059,8 +1150,10 @@ and (max-device-width:1099px){
     main.about-us>span{
         display: flex;
         width: 50%;
-        flex-direction: column;
-        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
     }
     
     .about-us__img{
@@ -1139,7 +1232,7 @@ and (max-device-width:1099px){
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-				margin-top: 16px;
+		margin-top: 16px;
         margin-right: 32px;
         margin-left: 16px;
         flex-wrap: nowrap; 
@@ -1159,8 +1252,10 @@ and (max-device-width:1099px){
         
         display: flex;
         width: 40%;
-        flex-direction: column;
-        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
     }
 
     div.services-line>.services-line__scroll{
@@ -1221,7 +1316,7 @@ article.services{
         height: fit-content;
         background-color: #F8F8F8;
         align-items: flex-start;
-        border-top: 1px solid #41F6D7;
+        /* border-top: 1px solid #41F6D7; */
     }
 
     .brends-list__description,
@@ -1237,7 +1332,7 @@ article.services{
         text-transform: uppercase;
         height: auto;
         padding:16px 32px;        
-        background:linear-gradient(to right, 
+        background:linear-gradient(to left, 
         rgba(255, 255, 255, 0),#fff);
         flex-grow: 1;
     }
